@@ -1,0 +1,49 @@
+<!-- Extend the base template -->
+{% extends "base.html" %}
+
+<!-- Set the title of the page to "Here is your search results!" -->
+{% block title %}
+Here is your search results!
+{% endblock %}
+
+<!-- Define the content block that will be inserted into the base template -->
+{% block content %}
+    <!-- Form for searching users, using GET method to pass the search query -->
+    <form method="GET" action="{{ url_for('auth.search') }}">
+        <!-- Input field for search query with a placeholder and pre-filled with the current query if any -->
+        <input type="text" name="q" placeholder="Search..." value="{{ request.args.get('q', '') }}">
+        <!-- Submit button for the search form -->
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Heading for search results, styled and centered -->
+    <h2 align="center" style="color: #00FF00; font-weight: bold;">Search results</h2>
+    
+    <!-- List to display search results -->
+    <ul>
+        <!-- Loop through each user in the results -->
+        {% for user in results %}
+            <!-- Display each user's name and email, centered -->
+            <li align="center">{{ user.name }} ({{ user.email }})</li>
+        {% else %}
+            <!-- Display message if no results are found, centered -->
+            <li align="center">No results found</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Heading for the current user's details, styled and centered -->
+    <h2 align="center" style="color: #00FF00; font-weight: bold;">{{ user.name }} details</h2>
+    
+    <!-- List to display the current user's notes -->
+    <ul style="margin-bottom: 20px;">
+        <!-- Loop through each note associated with the current user -->
+        {% for note in user_notes %}
+            <!-- Display each note's data, centered -->
+            <li align="center">{{ note.data }}</li>
+        {% else %}
+            <!-- Display message if no notes are found, centered -->
+            <li align="center">No notes found</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

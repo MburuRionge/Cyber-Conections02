@@ -1,0 +1,38 @@
+<!-- Extend the base template -->
+{% extends "base.html" %}
+
+<!-- Set the title of the page -->
+{% block title %}Home{% endblock %}
+
+<!-- Define the content block that will be inserted into the base template -->
+{% block content %}
+    <!-- Display the user's name in a centered, styled heading -->
+    <h1 align="center" style="color: #3498db; font-weight: bold;">{{ user.name }}</h1>
+    
+    <!-- List to display user notes -->
+    <ul class="list-group list-group-flush" id="notes">
+      <!-- Loop through each note associated with the user -->
+      {% for note in user.notes %}
+      <li class="list-group-item">
+        <!-- Display the note data -->
+        {{ note.data }}
+        <!-- Button to delete the note, calling the deleteNote JavaScript function with the note's ID -->
+        <button type="button" class="close" onClick="deleteNote('{{ note.id }}')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    
+    <!-- Form to add a new note -->
+    <form method="POST">
+      <!-- Text area for entering the new note -->
+      <textarea name="note" id="note" class="form-control"></textarea>
+      <br />
+      <!-- Centered button to submit the form -->
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Add organization details</button>
+      </div>
+    </form>
+{% endblock %}
+

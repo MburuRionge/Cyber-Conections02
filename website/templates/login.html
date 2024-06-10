@@ -1,0 +1,46 @@
+<!-- Extend the base template -->
+{% extends "base.html" %}
+
+<!-- Set the title of the page to "Login" -->
+{% block title %}Login{% endblock %}
+
+<!-- Define the content block that will be inserted into the base template -->
+{% block content %}
+    <!-- Login form -->
+    <form method="POST">
+      <!-- Centered heading for the form -->
+      <h3 align="center">Login</h3>
+      
+      <!-- Form group for the email input -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <!-- Email input field -->
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter email"
+        />
+      </div>
+      
+      <!-- Form group for the password input -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <!-- Password input field -->
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+        />
+      </div>
+      
+      <!-- Line break for spacing -->
+      <br />
+      
+      <!-- Submit button for the form -->
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+{% endblock %}
