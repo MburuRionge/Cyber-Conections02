@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Script to  connect to server using
+ssh victor -i ~/.ssh/cyber
