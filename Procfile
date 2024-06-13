@@ -1,0 +1,1 @@
+web: guniccorn app:main
