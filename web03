@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# server-03 login
+
+eval $("ssh-agent")
+
+ssh-add ~/.ssh/cyber
+
+ssh victor@192.168.0.117

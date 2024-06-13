@@ -77,6 +77,7 @@ def sign_up():
 def search():
     q = request.args.get("q")  # Get the search query from the request arguments
     results = []
+    user_notes = []
 
     if q:
         # Use ILIKE for case-insensitive search and partial matches
@@ -87,6 +88,7 @@ def search():
         print("Query executed, results:", results)  # Print the results for debugging
 
     # Get current user's notes if the user is authenticated
-    user_notes = current_user.notes if current_user.is_authenticated else []
+    if current_user.is_authenticated:
+        user_notes = current_user.notes
 
     return render_template("search.html", user=current_user, results=results, user_notes=user_notes)  # Render the search template

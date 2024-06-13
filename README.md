@@ -34,13 +34,15 @@ This made me throw away my chances of entering into this industry until I got a 
 Now this kickstarted my interest into this industry where an tilting towards. My first move is to use this new skills that I have acquired and start making an impact into this industry and thats where Cyber Connections comes into the picture.
 
 
-A user(organization or cyber-security firm) can access the website using any browser and from the browser they send a get request to my server. The user’s request is taken to the one of the web servers which responds with a login in or sign up request. The user responds by either login in or signing up, his/her information is stored in the database.
+A user(organization or cyber-security firm) can access the website using any browser and from the browser they send a get request to my server. The user’s request is taken to the one of the web servers which responds with a login in or sign up request.![Screenshot](Cyber-Conections02/website/static/Screenshot 2024-06-12 232259.png) The user responds by either login in or signing up, his/her information is stored in the database.
 
-Inside the home page the user post’s its details of the company thus making it easier for the two sides to meet. An eaxample is the cyber securit firm gives information about its cost, location, services offered and all that information is stored inside the website database.
+Inside the home page the user post’s its details of the company thus making it easier for the two sides to meet. An example is the cyber security firm gives information about its cost, location, services offered and all that information is stored inside the website database.
+![Screenshot](Cyber-Conections02/website/static/Screenshot 2024-06-12 231225.png)
+
 
 When an organization is in need of of a cyber security, it navigates to the search button and sends get request to access the cyber security companies and choose the best suited firm to patner with. The request is sent to the database, parses through it and fetches the list of cyber security firms with their details.
 
-The organization is then redirected to anothe page that contains the name, contact information and details of the cyber security firms, Thus fulfilling my goal of connecting them to cyber security firm. The organization chooses and contacts the cyber security firm best suited to patber with hence reducing the amount of time, cost and resources used to find a cyber security firm.
+The organization is then redirected to another page that contains the name, contact information and details of the cyber security firms, Thus fulfilling my goal of connecting them to cyber security firm![Screenshot](Cyber-Conections02/website/static/Screenshot 2024-06-12 000329.png). The organization chooses and contacts the cyber security firm best suited to patber with hence reducing the amount of time, cost and resources used to find a cyber security firm.
 
 For Frontend development I chose to use technologies like Javacsript which enables a user to interact with my website, CSS for styling my website and HTML which provided the templates to work on.For backend I have majorly worked with Python, Javascript and Flask framework and SQL to store my data.
 
@@ -79,6 +81,8 @@ Its a platform that aims to secure organizations by connecting them with cyber s
 victormburu3.wixsite.com
 
 https://www.linkedin.com/in/victor-mburu-596a10266/
+
+https://https://192.168.0.117:443/
 
 https://medium.com/@victormburu3/cyber-connection-is-a-software-platform-that-connects-two-groups-of-people-ie-organizations-and-8d63a7df05b9
 
